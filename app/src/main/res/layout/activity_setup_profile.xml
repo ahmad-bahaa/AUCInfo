@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryLight"
+    tools:context="com.ninjageeksco.projects.aucinfo.SetupProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_margin="25dp"
+        android:id="@+id/setup_profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/profile"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/setup_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:cursorVisible="true"
+        android:drawableLeft="@drawable/ic_person"
+        android:ems="10"
+        android:hint="First Name"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/setup_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:cursorVisible="true"
+        android:drawableLeft="@drawable/ic_person_outline"
+        android:ems="10"
+        android:hint="Last Name"
+        android:singleLine="true"
+        android:textColorLink="@color/colorSecondary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/setup_birthdate"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@drawable/ic_date_range"
+            android:gravity="center_vertical"
+            android:text=" BirthDate" />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checkedButton="@+id/setup_male"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/setup_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="Male"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/setup_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Female"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="Country : "
+        android:textColor="@color/colorTextOnSecondary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog" />
+</LinearLayout>
+    <Button
+        android:id="@+id/setup_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="Save"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextOnPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
+    </ScrollView>
+    </LinearLayout>
